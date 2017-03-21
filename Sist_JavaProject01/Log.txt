@@ -1,0 +1,6 @@
+1. Calculator_Beta_천혜현
+2. Management_Beta_박상훈
+3. MemoCalendar_Beta_이도영
+4. PictureGame_Beta_정시원
+5. Alarm_Beta_조경희
+6. TwoRukSer_Beta_문현진
