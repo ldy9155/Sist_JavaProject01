@@ -37,7 +37,6 @@ public class Main extends Frame implements ActionListener,Serializable{
 	private ObjectInputStream ois=null;
 	private Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
 	private String [] projectName = {"Calculator","Management","MemoCalendar","PictureGame","Alarm","TwoRukSer"};
-	private FileReader textFileReader;
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
@@ -57,7 +56,6 @@ public class Main extends Frame implements ActionListener,Serializable{
 			new Erukser();
 		}
 	}
-
 	public void init(){
 		jPanel[0] = new JPanel(new BorderLayout());
 		jPanel[1] = new JPanel();
@@ -97,16 +95,13 @@ public class Main extends Frame implements ActionListener,Serializable{
 					}
 				}
 			}
-			
 		jPanel[4] = new JPanel();
 		jPanel[4].add(jPanel[3]);
 		jPanel[4].add(jPanel[2]);
-		
 		jPanel[0].add("North",jPanel[1]);
 		jPanel[0].add("South",jPanel[4]);
 		this.add(jPanel[0]);
 	}
-	
 	public Main() {
 		init();
 		this.addWindowListener(new WindowAdapter() {
@@ -116,7 +111,6 @@ public class Main extends Frame implements ActionListener,Serializable{
 				System.exit(0);
 			}
 		});
-		
 		this.pack();
 		int xPos=dim.width/2-this.getWidth()/2;
 		int yPos=dim.height/2-this.getWidth()/2;
@@ -124,7 +118,6 @@ public class Main extends Frame implements ActionListener,Serializable{
 		this.setTitle("OGG ETC");
 		this.setVisible(true);
 	}
-	
 	public static void main(String[] args) {
 		Main main = new Main();
 	}

@@ -22,6 +22,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
 public class MemoDialog extends Dialog implements ActionListener{
@@ -36,6 +37,7 @@ public class MemoDialog extends Dialog implements ActionListener{
 	private int year,month,day;
 	private ObjectOutputStream oos;
 	private ObjectInputStream ois;
+	private JScrollPane jp;
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
@@ -84,11 +86,13 @@ public class MemoDialog extends Dialog implements ActionListener{
 		jPanel[0] = new JPanel();
 		
 		jLabel = new JLabel(year+" / "+month+" / "+day);
+		
 		jPanel[0].add(jLabel);
 		
 		jPanel[1] = new JPanel();
 		jTextArea = new JTextArea(20,40);
-		jPanel[1].add(jTextArea);
+		jp = new JScrollPane(new JScrollPane(jTextArea, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,JScrollPane.HORIZONTAL_SCROLLBAR_NEVER));
+		jPanel[1].add(jp);
 		
 		jPanel[2] = new JPanel(new GridLayout(1, 3));
 		for (int i = 0; i < jButtons.length; i++) {

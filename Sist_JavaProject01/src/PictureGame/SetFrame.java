@@ -17,6 +17,8 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.util.Arrays;
 import java.util.Calendar;
+import java.util.HashMap;
+import java.util.HashSet;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -40,6 +42,7 @@ public class SetFrame extends JFrame implements ActionListener {
 	JPanel gamePanel, timeScorePanel;
 	JPanel jPanelTotal;
 	JLabel timeLabel, getTimeLabel, scoreLabel, getScoreLabel;
+	
 
 	JButton[] jButtons = new JButton[16];
 
